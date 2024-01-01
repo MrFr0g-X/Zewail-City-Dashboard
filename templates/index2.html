@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zewail City Dashboard</title>
+    
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+    <script src="/static/charts.js" ></script>
+    <script src="/static/studentsGPAbar.js" defer></script>
+    <script src="/static/studentsCount.js" ></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <nav class="navbar navbar-expand-sm bg-info navbar-dark"> 
+    <a class="navbar-brand" href="{{ url_for('index') }}">
+      <img src="/static/zewail_city.png" alt="Zewail City" width="50" height="50">
+    </a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('index') }}">Global Dashboard</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('index2') }}">Students Performance</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="chart-leftContainer">
+    <div class="rounded-box">
+      <h2>Average GPA for the University Departments</h2>
+    </div>
+    <div class="chart-container"> 
+      <div id="chartlast" class="shadow"></div>
+    </div>
+  </div>
+  
+  <form class="form-inline" id="studentsGPAbar" method="post" onsubmit="fetchDataAndUpdateTable7(event)">
+    <label style="margin: 10px;" for="studentsGPAbar">Enter School name: </label>
+    <input class="form-control" type="text" id="studentsGPAbar" name="department" placeholder="write the school">
+    <button type="submit" class="btn btn-info">Search</button>
+  </form>
+  
+  <a href="{{ url_for('index2') }}" class="btn btn-primary active">search for another one</a>
+  </div>
+
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="{{ url_for('index') }}">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="{{ url_for('index') }}">1</a></li>
+    <li class="page-item active"><a class="page-link" href="{{ url_for('index2') }}">2</a></li>
+  </ul>
+</body>
+
+</html>

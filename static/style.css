@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(211, 211, 211);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    border-radius: 10px;
+}
+
+.text-mid {
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.chart-leftContainer {
+    padding-left: 3%;
+}
+
+.chart-rightContainer {
+    padding-left: 50%;
+    width: auto;
+    height: auto;
+}
+
+.chart-midContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10%;
+}
+
+#pieChartDiv, #barChartDiv, #ًstudentsGPAbar, #studentsCount, #coolPie, #person,#chartlast {
+    width: 90%;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    border-radius: 15px;
+}
+
+#coolPie {
+    width: 40%;
+}
+
+.chart-SpecialLeftContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.rounded-box {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 25%;
+}
