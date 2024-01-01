@@ -36,7 +36,7 @@ Users can use the search bar to filter the data by department or program. They c
     ```
     cd Zewail-City-Dashboard
     ```
-    * Install the required Python libraries:
+    * Install the required Python libraries
     ```
 
 3. **Running the dashboard**
@@ -46,8 +46,6 @@ Users can use the search bar to filter the data by department or program. They c
     python app.py
     ```
     * The dashboard will be available at http://127.0.0.1:5000/.
-
-
 
 
 
